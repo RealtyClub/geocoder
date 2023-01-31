@@ -61,5 +61,9 @@ module Geocoder::Result
     def street_address
       [street_number, route].compact.join(' ')
     end
+
+    def formatted_address
+      address
+    end
   end
 end
