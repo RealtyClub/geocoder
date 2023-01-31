@@ -53,5 +53,13 @@ module Geocoder::Result
     def country_code
       @place.country
     end
+
+    def street_number
+      @place.address_number
+    end
+
+    def street_address
+      [street_number, route].compact.join(' ')
+    end
   end
 end
